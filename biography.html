@@ -31,8 +31,6 @@
 			background-color: #333;
 			padding-top: 30px;
 			padding-bottom: 30px;
-
-
 		}
 		li{
 			display: inline;
@@ -44,23 +42,38 @@
 			color: white;
 			text-align: center;
 			text-decoration: none;
-			padding: 30px 30px 30px 30px;
+			margin: 30px 30px 30px 30px;
 		}
 
 		li a:hover{
 			background-color: black;
 		}
 
+		.mytd{
+			padding: 0 30 0 30;
+		}
+
 		.mytable{
 			background-color: #e4e4e4
 		}
 
-		.mytable td{
-			padding-right: 30px;
+		th{
+			text-decoration: underline;
+		}
+
+		#th1{
+			padding: 0 30 5 30;
+			text-align: left;
+		}
+
+		#th2{
+			padding: 0 30 5 30;
+			text-align: left;
 		}
 
 		.mytable tr:hover{
 			background-color: #f5f5f5;
+			border-color: #f5f5f5;
 		}
 
 		#table_line{
@@ -74,6 +87,21 @@
 			font-style: italic;
 		}
 
+		@media (max-width: 500px){
+
+			ul{
+				padding: 10 0 10 0;
+				margin: 0 0 0 0;
+			}
+
+			li a{
+				height: 20;
+				display: block;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
+			}
+		}
+
 	</style>
 
 </head>
@@ -82,11 +110,14 @@
 		<div class="banner">
 			<h1 class="mytitle">Steven Larrick</h1>
 		</div>
-	<ul>
-		<li><a href="./index.html">Home</a></li>
-		<li><a href="https://github.com/larricksj">Github</a></li>
-		<li><a href="./biography.html">Biography</a></li>
-	</ul>
+
+		<navbar>
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="https://github.com/larricksj">Github</a></li>
+				<li><a href="./biography.html">Biography</a></li>
+			</ul>
+		</navbar>
 	</header>
 	<meat>
 		<h3 style="text-align:center">Biography</h3>
@@ -97,34 +128,33 @@
 			<h2>My Accomplishments</h2>
 			<p id="table_description">Here are some of the things I have done over the years...</p>
 
-			<table>
+			<table cellspacing="0">
 			  <tr>
-			    <th>Year</th>
-			    <th>Description</th>
+			    <th id="th1">Year</th>
+			    <th id="th2">Description</th>
 			  </tr>
 			  <tr>
-			    <td>2016-2017</td>
-			    <td>Employment in UMD NOC</td>
+			    <td class="mytd">2016-2017</td>
+			    <td class="mytd">Employment in UMD NOC</td>
 			  </tr>
 			  <tr>
-			    <td>2016</td>
-			    <td>CompTIA Security+ Certified</td>
+			    <td class="mytd">2016</td>
+			    <td class="mytd">CompTIA Security+ Certified</td>
 			  </tr>
-			  	<td>2016</td>
-			    <td>Enrolled in UMD CS Program (2nd B.S.)</td>
-			  </tr>
-			  <tr>
-			    <td>2015-2016</td>
-			    <td>Cancer Research at NIH NCI ETIB</td>
+			  	<td class="mytd">2016</td>
+			    <td class="mytd">Enrolled in UMD CS Program (2nd B.S.)</td>
 			  </tr>
 			  <tr>
-			    <td>2015</td>
-			    <td>Grad from WFU with B.S. Biology (Cum Laude)</td>
+			    <td class="mytd">2015-2016</td>
+			    <td class="mytd">Cancer Research at NIH NCI ETIB</td>
+			  </tr>
+			  <tr>
+			    <td class="mytd">2015</td>
+			    <td class="mytd">Grad from WFU with B.S. Biology (Cum Laude)</td>
 			  </tr>
 			</table>
 			<hr id="table_line">
 		</div>
-
 
 	</meat>
 </body>
