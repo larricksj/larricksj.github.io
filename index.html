@@ -1,14 +1,14 @@
+
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
 	<title>Steven Larrick</title>
-	<!-- meta tag for rendering larger on mobile, tried it just for fun -->
+	<!-- meta tag for rendering larger on mobile -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"> -->
 	<style type="text/css">
 		header {
 			text-align: center;
 			height:500px;
-			width:auto;
 		}
 		.banner{
 			background-color: black;
@@ -47,14 +47,46 @@
 			padding: 30px 30px 30px 30px;
 		}
 
-		navbar li a:hover{
+		li a:hover{
 			background-color: black;
 		}
 
-		meat a{
+		.mytd{
+			padding: 0 30 0 30;
+		}
+
+		.mytable{
+			background-color: #e4e4e4
+		}
+
+		th{
 			text-decoration: underline;
+		}
+
+		#th1{
+			padding: 0 30 5 30;
+			text-align: left;
+		}
+
+		#th2{
+			padding: 0 30 5 30;
+			text-align: left;
+		}
+
+		.mytable tr:hover{
+			background-color: #f5f5f5;
+			border-color: #f5f5f5;
+		}
+
+		#table_line{
+			height: 3px;
+			background-color: black;
+			border-color: black;
+		}
+
+		#table_description{
+			font-family: arial;
 			font-style: italic;
-			color: blue;
 		}
 
 		@media (max-width: 500px){
@@ -89,9 +121,42 @@
 		</navbar>
 	</header>
 	<meat>
-		<h3 style="text-align:center">Welcome to my site!</h3>
-		<p style="text-align:center">Click on the <a href="./biography.html">Bio tab</a> to learn more about me!</p>
-	</meat>
+		<h3 style="text-align:center">Biography</h3>
+		<p style="text-align:center">I am a Computer Science major at the University of Maryland and I am specializing in cyber security</p>
 
+		<div class="mytable">
+			<hr id="table_line">
+			<h2>My Accomplishments</h2>
+			<p id="table_description">Here are some of the things I have done over the years...</p>
+
+			<table cellspacing="0">
+			  <tr>
+			    <th id="th1">Year</th>
+			    <th id="th2">Description</th>
+			  </tr>
+			  <tr>
+			    <td class="mytd">2016-2017</td>
+			    <td class="mytd">Employment in UMD NOC</td>
+			  </tr>
+			  <tr>
+			    <td class="mytd">2016</td>
+			    <td class="mytd">CompTIA Security+ Certified</td>
+			  </tr>
+			  	<td class="mytd">2016</td>
+			    <td class="mytd">Enrolled in UMD CS Program (2nd B.S.)</td>
+			  </tr>
+			  <tr>
+			    <td class="mytd">2015-2016</td>
+			    <td class="mytd">Cancer Research at NIH NCI ETIB</td>
+			  </tr>
+			  <tr>
+			    <td class="mytd">2015</td>
+			    <td class="mytd">Grad from WFU with B.S. Biology (Cum Laude)</td>
+			  </tr>
+			</table>
+			<hr id="table_line">
+		</div>
+
+	</meat>
 </body>
 </html>
